@@ -10,6 +10,9 @@ export default async (): Promise<Connection> => {
         process.env.NODE_ENV.trim() === 'test'
           ? "./src/database/database.test.sqlite"
           : defaultOptions.database,
+      // database: (!process.env.NODE_ENV || process.env.NODE_ENV.trim() !== 'test')
+      //   ? defaultOptions.database
+      //   : "./src/database/database.test.sqlite"
     })
   );
 };
