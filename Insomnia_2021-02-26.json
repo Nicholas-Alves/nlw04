@@ -1,0 +1,240 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-02-26T20:36:46.538Z",
+  "__export_source": "insomnia.desktop.app:v2020.5.2",
+  "resources": [
+    {
+      "_id": "req_dafdcd9d92284f3e92f2820c521f5919",
+      "parentId": "fld_5e58084da9ac4c23b97bf8782c642745",
+      "modified": 1614355152403,
+      "created": 1614355119994,
+      "url": "{{ _.baseURL }}/nps/2a360eb0-afad-4f94-b556-b601e9eccda6",
+      "name": "Calculate",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1614355119994,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_5e58084da9ac4c23b97bf8782c642745",
+      "parentId": "wrk_3ccb2ee2c1ab403cb84e71cb2d4621a6",
+      "modified": 1614355113738,
+      "created": 1614355113738,
+      "name": "NPS",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1614355113738,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_3ccb2ee2c1ab403cb84e71cb2d4621a6",
+      "parentId": null,
+      "modified": 1614002215284,
+      "created": 1614002215284,
+      "name": "NLW#4",
+      "description": "",
+      "scope": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_e3da36a2cdde4c8abdd75b886de5519b",
+      "parentId": "fld_c5ef49c2d2d54c438fabf773f571ed4e",
+      "modified": 1614355700168,
+      "created": 1614270867776,
+      "url": "{{ _.baseURL }}/sendMail",
+      "name": "Send",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"user2@example.com\",\n\t\"survey_id\": \"2a360eb0-afad-4f94-b556-b601e9eccda6\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_401b9678ec2f41fbac085909850f2c2c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1614270867776,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_c5ef49c2d2d54c438fabf773f571ed4e",
+      "parentId": "wrk_3ccb2ee2c1ab403cb84e71cb2d4621a6",
+      "modified": 1614270859673,
+      "created": 1614270859673,
+      "name": "SendMail",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1614270859673,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_31289321a6c54a999e49429a2b566e00",
+      "parentId": "fld_198940b6976a47c8bd928524fdd9d4a9",
+      "modified": 1614172177429,
+      "created": 1614172169111,
+      "url": "{{ _.baseURL }}/surveys",
+      "name": "Show",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1614172169111,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_198940b6976a47c8bd928524fdd9d4a9",
+      "parentId": "wrk_3ccb2ee2c1ab403cb84e71cb2d4621a6",
+      "modified": 1614171837441,
+      "created": 1614171837441,
+      "name": "Surveys",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1614171837441,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_e50ba459709d4ea5b267c413a2e835d9",
+      "parentId": "fld_198940b6976a47c8bd928524fdd9d4a9",
+      "modified": 1614171926914,
+      "created": 1614171842399,
+      "url": "{{ _.baseURL }}/surveys",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"title\": \"Queremos ouvir sua opinião!\",\n\t\"description\": \"De 0 a 10, o quanto você recomendaria a Rocketseat?\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_caab2c070a084cd68e484d5dbbcf6a23"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1614171842399,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_67d31132f8df4c149a76adbbe16e4a16",
+      "parentId": "fld_33f55cb7a9474f3aa24060db2fd3a691",
+      "modified": 1614368991642,
+      "created": 1614097204230,
+      "url": "{{ _.baseURL }}/users",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Nicholas Alves\",\n\t\"email\": \"nicholas.alves14@gmail.com\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_eba932abf6c6438ba696f63f9ecd735c"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1614097204230,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_33f55cb7a9474f3aa24060db2fd3a691",
+      "parentId": "wrk_3ccb2ee2c1ab403cb84e71cb2d4621a6",
+      "modified": 1614097193444,
+      "created": 1614097193444,
+      "name": "Users",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1614097193444,
+      "_type": "request_group"
+    },
+    {
+      "_id": "env_2875b084f146af67f37ec4049f3e399f51d13647",
+      "parentId": "wrk_3ccb2ee2c1ab403cb84e71cb2d4621a6",
+      "modified": 1614007316894,
+      "created": 1614002215370,
+      "name": "Base Environment",
+      "data": { "baseURL": "http://localhost:3333" },
+      "dataPropertyOrder": { "&": ["baseURL"] },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1614002215370,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_2875b084f146af67f37ec4049f3e399f51d13647",
+      "parentId": "wrk_3ccb2ee2c1ab403cb84e71cb2d4621a6",
+      "modified": 1614002215375,
+      "created": 1614002215375,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_62934ccbdc534432883895f1ba6cb457",
+      "parentId": "wrk_3ccb2ee2c1ab403cb84e71cb2d4621a6",
+      "modified": 1614002215305,
+      "created": 1614002215305,
+      "fileName": "NLW#4",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
